@@ -4,7 +4,7 @@ document.querySelector("#learnosity_assess > div > div.lrn-region-group.lrn-grou
 ((() => {
     const origOpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function() {
-        if (arguments[1] == '/MRL/rest/student-assignment?assignmentId=0c850696-2d22-4155-a0b3-7d0b8909c496' && cc == 1) {
+        if (arguments[1].includes('/MRL/rest/student-assignment?assignmentId') && cc == 1) {
             console.log("attempt update check ans count")
             return 
         } else {
